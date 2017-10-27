@@ -1,7 +1,7 @@
 {
-  "author": "harvest",
+  "author": "enflow-nl",
   "name": "chosen",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Chosen is a JavaScript plugin that makes select boxes user-friendly. It is currently available in both jQuery and Prototype flavors.",
   "keywords": [
     "select",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/harvesthq/chosen.git"
+    "url": "https://github.com/enflow-nl/chosen.git"
   },
   "engines": {
     "node": ">=0.4.0"
