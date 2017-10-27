@@ -71,8 +71,8 @@ class Chosen extends AbstractChosen
     @form_field_jq.trigger("chosen:ready", {chosen: this})
 
   register_observers: ->
-    @container.bind 'touchstart.chosen', (evt) => this.container_mousedown(evt); return
-    @container.bind 'touchend.chosen', (evt) => this.container_mouseup(evt); return
+    # @container.bind 'touchstart.chosen', (evt) => this.container_mousedown(evt); return
+    # @container.bind 'touchend.chosen', (evt) => this.container_mouseup(evt); return
 
     @container.bind 'mousedown.chosen', (evt) => this.container_mousedown(evt); return
     @container.bind 'mouseup.chosen', (evt) => this.container_mouseup(evt); return
@@ -85,8 +85,8 @@ class Chosen extends AbstractChosen
     @search_results.bind 'mousewheel.chosen DOMMouseScroll.chosen', (evt) => this.search_results_mousewheel(evt); return
 
     @search_results.bind 'touchstart.chosen', (evt) => this.search_results_touchstart(evt); return
-    @search_results.bind 'touchmove.chosen', (evt) => this.search_results_touchmove(evt); return
-    @search_results.bind 'touchend.chosen', (evt) => this.search_results_touchend(evt); return
+    # @search_results.bind 'touchmove.chosen', (evt) => this.search_results_touchmove(evt); return
+    # @search_results.bind 'touchend.chosen', (evt) => this.search_results_touchend(evt); return
 
     @form_field_jq.bind "chosen:updated.chosen", (evt) => this.results_update_field(evt); return
     @form_field_jq.bind "chosen:activate.chosen", (evt) => this.activate_field(evt); return
