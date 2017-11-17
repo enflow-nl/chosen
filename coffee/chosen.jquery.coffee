@@ -180,7 +180,9 @@ class Chosen extends AbstractChosen
     @active_field = true
 
     @search_field.val(@search_field.val())
-    @search_field.focus()
+
+    if not @is_touch
+      @search_field.focus()
 
 
   test_active_click: (evt) ->
