@@ -248,7 +248,9 @@ class Chosen extends AbstractChosen
     @container.addClass "chosen-with-drop"
     @results_showing = true
 
-    @search_field.focus()
+    if not @is_touch
+      @search_field.focus()
+
     @search_field.val this.get_search_field_value()
 
     this.winnow_results()
@@ -294,7 +296,9 @@ class Chosen extends AbstractChosen
     if target.length
       @result_highlight = target
       this.result_select(evt)
-      @search_field.focus()
+
+      if not @is_touch
+        @search_field.focus()
 
   search_results_mouseover: (evt) ->
     target = if $(evt.target).hasClass "active-result" then $(evt.target) else $(evt.target).parents(".active-result").first()
@@ -323,7 +327,8 @@ class Chosen extends AbstractChosen
   choice_destroy: (link) ->
     if this.result_deselect( link[0].getAttribute("data-option-array-index") )
       if @active_field
-        @search_field.focus()
+        if not @is_touch
+          @search_field.focus()
       else
         this.show_search_field_default()
 
